@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Spoil</title>
+      <link rel="stylesheet" type="text/css" href="style_inventory.css" />
+      <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+      <meta charset="UTF-8">
+      <meta name="description" content="Food management and expiration visualization">
+      <meta name="authors" content="Anam Khan, Anthony Verrillo, Graham Burleigh">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div id="screen">
+         <div id="head-bar">
+            <p id="inventory-button">
+               <a href="inventory.html">
+               Inventory
+               </a>
+            </p>
+            <p id="home-button">
+               <a href="homescreen.html">
+               <img id="home-button-img" src="ref_images/home_button.png" alt="Home button">
+               </a>
+            </p>
+            <p id="grocery-button">
+               <a href="grocerylist.html">
+               Grocery List
+               </a>
+            </p>
+         </div>
+         <div id="main-container">
+            <div id="title-container-main">
+               Spoil
+            </div>
+            <form id="add-form" method="post" onsubmit="results(); return false">
+               <h3>Add Item</h3>
+               <input id="food-name" placeholder="Name" type="text">
+               <select id="group-name">
+                  <option>Fruits</option>
+                  <option>Veggies</option>
+                  <option selected="selected">Meat</option>
+                  <option>Dairy</option>
+                  <option>Grain</option>
+               </select>
+               <input id="expiration-date" placeholder="Expiration Date" type="date">
+               <input id="submit-button" placeholder="Submit" type="submit" value="Submit">
+            </form>
+            <div id="dropdown-add">
+                <button class="dropbtn1">See More</button>
+                <div class="dropdown-content">
+                   <a href="#">Select a date using the calendar above, and the app tracks its expiration in real time.</a>
+                </div>
+             </div>
+            <div id="fact-window">
+               <p>Roughly one third of the food produced in the world for human consumption every year – approximately 1.3 billion tonnes – gets lost or wasted.</p>
+            </div>
+            <div id="food-container">
+               <div id="food-container-title">
+                  <h1>Inventory</h1>
+               </div>
+               <div id="item-tip">
+                  <p>Your items will appear here as they are added</p>
+               </div>
+               <div id="dropdown-inv">
+                <button class="dropbtn2">See More</button>
+                <div class="dropdown-content">
+                   <a href="#">If an item expires, its data is automatically transferred to the grocery list so you always know what you need.</a>
+                </div>
+             </div>
+               <p>
+               <ul id="display1"></ul>
+               <ul id="display2" hidden></ul>
+               </p>
+            </div>
+         </div>
+      </div>
+   </body>
+   <script src="inventory_helpers.js"></script>
+</html>

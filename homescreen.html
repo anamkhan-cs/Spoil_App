@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Spoil</title>
+      <link rel="stylesheet" type="text/css" href="style_inventory.css" />
+      <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+      <meta charset="UTF-8">
+      <meta name="description" content="Food management and expiration visualization">
+      <meta name="authors" content="Anam Khan, Anthony Verrillo, Graham Burleigh">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div id="screen">
+         <div id="head-bar">
+            <p id="inventory-button">
+               <a href="inventory.html">
+               Inventory
+               </a>
+            </p>
+            <p id="home-button">
+               <a href="homescreen.html">
+               <img id="home-button-img" src="ref_images/home_button.png" alt="Home button">
+               </a>
+            </p>
+            <p id="grocery-button">
+               <a href="grocerylist.html">
+               Grocery List
+               </a>
+            </p>
+         </div>
+         <div id="main-container">
+            <div id="title-container-main-homescreen">
+               Spoil
+               <p>Better eating, better living</p>
+            </div>
+            <div class="dropdown">
+               <button class="dropbtn">How It Works</button>
+               <div class="dropdown-content">
+                  <a href="#">Add items through the inventory screen.</a>
+                  <a href="#">Track expiration dates in real time.</a>
+                  <a href="#">Replace expired items by automatically adding to grocery list.</a>
+               </div>
+            </div>
+            <div id="welcome-text">
+                <p>
+                Our app was created to help people like you live conciously and improve their food management skills. It is estimated that
+                30-50% of food produced for human consumption each year is wasted, but you can be apart of the generation who ends food waste once and for all.
+                Follow the instructions on each side to get familiar with the interface and start saving food and money.
+                </p>
+            </div>
+            <div id="about-text">
+                <ul>Graham Burleigh, Sophomore CS Class of 2022</ul>
+                <ul>Anthony Verrillo, Senior CS Class of 2020</ul>
+                <ul>Anam Khan, Graduate Student Class of 2020</ul>
+            </div>
+         </div>
+      </div>
+   </body>
+   <script src="inventory_helpers.js"></script>
+</html>

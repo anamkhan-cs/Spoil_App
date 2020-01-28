@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Spoil</title>
+      <link rel="stylesheet" type="text/css" href="style_inventory.css" />
+      <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+      <meta charset="UTF-8">
+      <meta name="description" content="Food management and expiration visualization">
+      <meta name="authors" content="Anam Khan, Anthony Verrillo, Graham Burleigh">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div id="screen">
+         <div id="head-bar">
+            <p id="inventory-button">
+               <a href="inventory.html">
+               Inventory
+               </a>
+            </p>
+            <p id="home-button">
+               <a href="homeScreen.html">
+               <img id="home-button-img" src="ref_images/home_button.png" alt="Home button">
+               </a>
+            </p>
+            <p id="grocery-button">
+               <a href="grocerylist.html">
+               Grocery List
+               </a>
+            </p>
+         </div>
+         <div id="main-container">
+            <div id="title-container-main">
+               Spoil
+            </div>
+            <div id="fact-window-grocery">
+               <p>x Items have expired for you this week!</p>
+            </div>
+            <textarea id="notepad" placeholder="Notes to self:"></textarea>
+            <form id="add-form1" method="post" onsubmit="results(); return false" >
+               <h3>Add Item</h3>
+               <input id="food-name" placeholder="Name" type="text">
+               <select id="group-name">
+                  <option>Fruits</option>
+                  <option>Veggies</option>
+                  <option selected="selected">Meat</option>
+                  <option>Dairy</option>
+                  <option>Grain</option>
+               </select>
+               <input id="submit-button" placeholder="Submit" type="submit" value="Submit" >
+            </form>
+            <div id="dropdown-add">
+                <button class="dropbtn1">See More</button>
+                <div class="dropdown-content">
+                   <a href="#">Manually add and edit items to track all your food in one place.</a>
+                </div>
+             </div>
+            <div id="food-container">
+               <div id="food-container-title">
+                  <h1>Grocery List</h1>
+               </div>
+               <p class="flavor-text">Your items are: 
+               <ul id="display2"></ul>
+               <ol id="display1"></ol>
+               </p>
+               <div id="tool-window">
+                <button id="delete-item-button" onclick="deleteItem()" type="button">
+                    <img src="ref_images/delete_button.png" height="30px" width="30px">
+                </button>
+            </div>
+            </div>
+         </div>
+      </div>
+   </body>
+   <script src="grocery_helpers.js"></script>
+</html>
